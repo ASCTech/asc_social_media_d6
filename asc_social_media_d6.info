@@ -1,0 +1,6 @@
+name = "ASC Social Media for Drupal 6"
+description = "ASC Social Media Block and Admin Form"
+core = "6.x"
+package = "ASC"
+version = "6.x.-1.x"
+files[] = asc_social_media_d6.module

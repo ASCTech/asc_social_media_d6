@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_block().
+ */
+function asc_social_media_d6_block($op = 'list', $delta = 0, $edit = array()) {
+	switch ($op) {
+
+		case 'list':
+			$blocks[0]['info'] = t('ASC Social Media Share');
+			return $blocks;
+
+		case 'view':
+			if ($delta == 0) {
+				$block['subject'] = t('Asc_social_media_d6 block 1 title');
+				$block['content'] = theme('asc_socialmedia_sharing', $vars);
+			}
+			return $block;
+	}
+}
+
+/*
+ * Implementation of hook_theme()
+ */
+function asc_socialmedia_theme() {
+  return array(
+    'asc_socialmedia_sharing' => array(
+      'template' => 'asc_socialmedia_sharing',
+    ),
+  );
+}
+
+/**
+ * Implements hook_init().
+ */
+function asc_social_media_d6_init() {
+  drupal_add_css(drupal_get_path('module', 'asc_social_media_d6') . '/asc_socialmedia.css');
+  drupal_add_js(drupal_get_path('module', 'asc_social_media_d6') . '/asc_socialmedia_sharing.js');
+}
