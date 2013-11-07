@@ -19,7 +19,26 @@ function asc_social_media_d6_block($op = 'list', $delta = 0, $edit = array()) {
 					'picture' => '',
 					'description' => '',
 				);
-				$block['content'] = theme('asc_socialmedia_sharing', $vars);
+				// $block['content'] = theme('asc_socialmedia_sharing', $vars);
+				$block['content'] = '';
+				
+				$block['content'] .= '<div id="asc-sharing-wrapper">';
+				$block['content'] .= '	<div id="asc-sharing-dropdown" style="float: left;">';
+				$block['content'] .= '		<div id="asc-sharing-button">share <div id="plus">+</div></div>';
+				$block['content'] .= '		<div id="asc-sharing-icons">';
+				$block['content'] .= '		<a href="http://www.facebook.com/sharer.php?u=' . $vars['url'] . '&t=' . $vars['title'] . '" id="asc-facebook-share" class="asc-sharing-link" title="Share on Facebook" />Share on Facebook</a>|';
+				$block['content'] .= '		<a href="http://twitter.com/share?url=' . $vars['url'] . '&text=' . $vars['title'] . '" id="asc-twitter-share" class="asc-sharing-link" title="Share on Twitter"/>Share on Twitter</a>|';
+				$block['content'] .= '		<a href="http://www.tumblr.com/share/link?url=' . $vars['url'] . '&name=' . $vars['title'] . '&description=' . $vars['description'] . '" id="asc-tumblr-share" class="asc-sharing-link" title="Share on Tumblr">Share on Tumblr</a>|';
+				$block['content'] .= '		<a href="http://www.linkedin.com/shareArticle?mini=true&url=' . $vars['url'] . '&title=' . $vars['title'] . '&summary=' . $vars['description'] . '" id="asc-linkedin-share" class="asc-sharing-link" title="Share on LinkedIn">Share on LinkedIn</a>|';
+				$block['content'] .= '		<a href="https://plus.google.com/share?url=' . $vars['url'] . '" id="asc-googleplus-share" class="asc-sharing-link" title="Share on Google Plus">Share on Google Plus</a>';
+				$block['content'] .= '		</div>';
+				$block['content'] .= '	</div>';
+				$block['content'] .= '	<div id="asc-sharing-sharprint">';
+				$block['content'] .= '		<a id="asc-print-share" href="javascript:if(window.print)window.print()">Print</a>';
+				$block['content'] .= '		<a id="asc-mail-share" href="mailto:?subject=Shared link from ' . $vars['title'] . ' ' . $vars['title'] . ' ' . $vars['url'] . '">Mail to friend</a>';
+				$block['content'] .= '	</div>';
+				$block['content'] .= '</div>';
+				
 			}
 			return $block;
 	}
