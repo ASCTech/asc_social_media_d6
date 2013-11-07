@@ -13,6 +13,12 @@ function asc_social_media_d6_block($op = 'list', $delta = 0, $edit = array()) {
 		case 'view':
 			if ($delta == 0) {
 				$block['subject'] = t('Asc_social_media_d6 block 1 title');
+				$vars = array(
+					'url' => urlencode('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']),
+					'title' => urlencode(drupal_get_title()),
+					'picture' => '',
+					'description' => '',
+				);
 				$block['content'] = theme('asc_socialmedia_sharing', $vars);
 			}
 			return $block;
