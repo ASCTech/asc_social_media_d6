@@ -3,6 +3,10 @@
 	clear: both;
 }
 
+#block-asc_social_media_d6-asc_socialmedia_sharing .content{
+	overflow: visible !important;
+}
+
 .block-asc-socialmedia {
   float: right;
   font-size: 0;
@@ -42,6 +46,10 @@
 #asc-sharing-wrapper {
   position: relative;
   float: right;
+}
+
+#asc-sharing-wrapper a{
+	border-bottom: none !important;
 }
 
 #asc-sharing-wrapper {
