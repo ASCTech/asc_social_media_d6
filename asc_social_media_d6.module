@@ -4,6 +4,7 @@
  * Implements hook_block().
  */
 function asc_social_media_d6_block($op = 'list', $delta = 0, $edit = array()) {
+	var_dump(request_uri());
 	switch ($op) {
 
 		case 'list':
