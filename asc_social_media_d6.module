@@ -60,5 +60,5 @@ function asc_socialmedia_theme() {
  */
 function asc_social_media_d6_init() {
   drupal_add_css(drupal_get_path('module', 'asc_social_media_d6') . '/asc_socialmedia.css');
-  drupal_add_js(drupal_get_path('module', 'asc_social_media_d6') . '/asc_socialmedia_sharing.js');
+  // drupal_add_js(drupal_get_path('module', 'asc_social_media_d6') . '/asc_socialmedia_sharing.js');
 }
