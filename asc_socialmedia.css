@@ -1,8 +1,10 @@
-.block-asc-socialmedia{float: right; font-size: 0;}
+.block-asc_social_media_d6{clear: both; height: 25px;}
+.block-asc_social_media_d6 .content{float: right;}
 .block-asc-socialmedia-sharing {float:right; padding-bottom: 1em; font-size: 1em;}
-.block-asc-socialmedia a img{margin:0px 0px 10px 10px; float:right;}
+.block-asc_social_media_d6 a img{margin:0px 0px 10px 10px; float:right;}
 #asc-sharing-icons{float:left; font-size:0; line-height:0;}
 #asc-sharing-icons a{display:inline-block;}
+#asc-sharing-wrapper a{border: none!important;}
 #asc-sharing-wrapper{color:#666; float:left;}
 #asc-sharing-wrapper span{float: left;}
 #asc-sharing-wrapper #plus{display:block; position:absolute; top:0px; right:0px; width:16px; padding-left:6px; height:23px; background:#666666; color:#ffffff;}
